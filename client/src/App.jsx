@@ -6,14 +6,14 @@ function App() {
 
     // on load of page
     useEffect(() => {
-        async function fetchAllUsers() {
+        async function fetchAllData() {
             const response = await fetch("http://localhost:5050/weather");
             const data = await response.json();
 
-            setWeatherData(data.weatherData);
+            setWeatherData(data.weatherData.weatherData);
         }
         try {
-            fetchAllUsers();
+            fetchAllData();
         } catch (e) {
             console.log(e);
         }
