@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import IndexCard from "./components/IndexCard"
 
 function App() {
     const [weatherData, setWeatherData] = useState([]);
@@ -22,11 +23,7 @@ function App() {
     return (
         <>
         {weatherData.map((w) => (
-          <div key={w._id}>
-            <h1>{w.icao}</h1>
-            <p>Active runway: {w.activeRunway[0]}</p>
-            <p>Visibility: {w.vis}m</p>
-          </div>
+          <IndexCard key={w._id} data={w}/>
         ))}
         </>
     );
