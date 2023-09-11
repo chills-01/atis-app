@@ -1,6 +1,5 @@
-import React from "react";
 import { useState, useEffect } from "react";
-import IndexCard from "./components/IndexCard"
+import IndexWrapper from "./components/IndexWrapper";
 
 function App() {
     const [weatherData, setWeatherData] = useState([]);
@@ -21,11 +20,7 @@ function App() {
     }, []);
 
     return (
-        <>
-        {weatherData.map((w) => (
-          <IndexCard key={w._id} data={w}/>
-        ))}
-        </>
+        <IndexWrapper weatherData={weatherData}/>
     );
 }
 
