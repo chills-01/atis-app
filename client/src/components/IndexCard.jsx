@@ -1,5 +1,3 @@
-import "./IndexCard.css";
-
 import React from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
@@ -14,46 +12,38 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const IndexCardStyle = styled.div`
     border: 1px solid black;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    margin-bottom: 20px;
+    height: 150px;
+    width: 341px;
+    background-color: #EDF2FB;
 `;
+
+const AirportName = styled.h2`
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+`;
+
+const AirportICAO = styled.h2`
+    font-size: 15px;
+    font-weight: 100;
+    margin-top: 2px;
+`
 
 export default function IndexCard({ data }) {
     return (
-        // <Box sx={{ minWidth: 100, borderRadius: "20px", margin: "10px" }}>
-        //     <Card variant="outlined">
-        //         <React.Fragment>
-        //             <CardContent>
-        //                 <Typography
-        //                     sx={{ fontSize: 14 }}
-        //                     color="text.secondary"
-        //                     gutterBottom
-        //                 ></Typography>
-        //                 <Typography variant="h5" component="div">
-        //                     {data.icao}
-        //                 </Typography>
-        //                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
-        //                     {data.name}
-        //                 </Typography>
-        //                 <Typography variant="body2">
-        //                     well meaning and kindly.
-        //                     <br />
-        //                     {'"a benevolent smile"'}
-        //                 </Typography>
-        //             </CardContent>
-        //             <CardActions>
-        //                 <Button size="small">Learn More</Button>
-        //             </CardActions>
-        //         </React.Fragment>
-        //     </Card>
-        // </Box>
 
         <IndexCardStyle >
-            <h2>{data.name}</h2>
-            <IconButton>
-                <FavoriteIcon />
-            </IconButton>
+            <AirportName style={{}}>{data.name}</AirportName>
+            <AirportICAO>{data.icao}</AirportICAO>
         </IndexCardStyle>
     );
 }
+
+
+{/* <IconButton>
+<FavoriteIcon />
+</IconButton> */}
