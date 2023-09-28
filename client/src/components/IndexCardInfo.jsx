@@ -1,7 +1,10 @@
-export default IndexCardInfo({data}) {
+export default function IndexCardInfo({ data }) {
     return (
-        <ul>
-        
-        </ul>
-    )
+        <div>
+            <p>{data.wind.speed}</p>
+            <p>{data.temperature}</p>
+            <p>{data.qnh}</p>
+            <p>{data.vis}</p>
+        </div>
+    );
 }
