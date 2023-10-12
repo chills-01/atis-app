@@ -8,9 +8,10 @@ export default function IndexWrapper({ weatherData }) {
             'flex-direction': 'column',
             'align-items': 'center',
             'justify-content': 'center',
-            'background-color': '#E2EAFC',
+            'background-color': 'white',
             'height': 'auto',
             'width': '100%',
+            'padding-top': '25px',
         }}>
             {weatherData.map((w) => (
                 <IndexCard key={w._id} data={w} />

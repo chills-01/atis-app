@@ -16,7 +16,7 @@ const IndexCardStyle = styled.div`
     border: 1px solid black;
     border-radius: 10px;
     box-sizing: border-box;
-    padding: 15px;
+    padding: 13px 17px;
     margin-bottom: 20px;
     height: 150px;
     width: 341px;
@@ -31,9 +31,10 @@ const AirportName = styled.h2`
 `;
 
 const AirportICAO = styled.h2`
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 100;
     margin-top: 2px;
+    margin-bottom: 0px
 `
 
 export default function IndexCard({ data }) {
