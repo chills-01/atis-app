@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import CardInfoBox from "./CardInfoBox";
 
 const CardInfoContainer = styled.div`
     border: 1px solid red;
@@ -11,14 +12,6 @@ const CardInfoContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
 `;
-
-const CardInfoBox = styled.div`
-    height: auto;
-    border: 1px solid green;
-    box-sizing: border-box;
-    width: 62px;
-    background-color: white;
-`
 
 export default function IndexCardInfo({ data }) {
     return (

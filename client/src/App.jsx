@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import IndexWrapper from "./components/IndexWrapper";
+import IndexWrapper from "./components/IndexCard/IndexWrapper";
 import SearchBarContainer from "./components/SearchBarContainer";
 
 function App() {

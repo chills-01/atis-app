@@ -9,6 +9,7 @@
 // import FavoriteIcon from '@mui/icons-material/Favorite';
 import { styled } from "styled-components";
 import IndexCardInfo from "./IndexCardInfo";
+import IndexCardHeader from "./IndexCardHeader";
 
 
 
@@ -17,32 +18,18 @@ const IndexCardStyle = styled.div`
     border-radius: 10px;
     box-sizing: border-box;
     padding: 13px 17px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     height: 150px;
     width: 341px;
     background-color: #EDF2FB;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
 `;
 
-const AirportName = styled.h2`
-    font-size: 20px;
-    font-weight: 400;
-    margin: 0;
-`;
-
-const AirportICAO = styled.h2`
-    font-size: 12px;
-    font-weight: 100;
-    margin-top: 2px;
-    margin-bottom: 0px
-`
-
 export default function IndexCard({ data }) {
     return (
 
         <IndexCardStyle >
-            <AirportName style={{}}>{data.name}</AirportName>
-            <AirportICAO>{data.icao}</AirportICAO>
+            <IndexCardHeader data={data}></IndexCardHeader>
             <IndexCardInfo data={data}></IndexCardInfo>
         </IndexCardStyle>
     );
