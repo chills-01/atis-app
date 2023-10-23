@@ -8,7 +8,7 @@ const IndexWrapperDiv = styled.div`
     justify-content: center;
     background-color: white;
     height: auto;
-    width: 100%,; 
+    width: 100%; 
 
 `;
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import IndexWrapper from "./components/IndexCard/IndexWrapper";
 import SearchBarContainer from "./components/SearchBarContainer";
+import NavBarContainer from "./components/NavBarContainer";
 
 function App() {
     const [weatherData, setWeatherData] = useState([]);
@@ -24,6 +25,7 @@ function App() {
         <>
             <SearchBarContainer />
             <IndexWrapper weatherData={weatherData} />
+            <NavBarContainer></NavBarContainer>
         </>
     );
 }
