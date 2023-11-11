@@ -11,6 +11,7 @@ const NavBarContainerDiv = styled.div`
 `;
 
 export default function NavBarContainer() {
-    return <NavBarContainerDiv></NavBarContainerDiv>
+    return <NavBarContainerDiv>
+    </NavBarContainerDiv>
 
 }

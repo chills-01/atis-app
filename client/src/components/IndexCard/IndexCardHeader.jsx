@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import LikeButton from "./LikeButton";
 
 const AirportName = styled.h2`
     font-size: 20px;
@@ -13,12 +14,31 @@ const AirportICAO = styled.h2`
     margin-bottom: 0px;
 `;
 
+const HeaderStyles = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
+
+const LikeButtonStyles = styled.div`
+    
+    width: 25%;
+`;
+
 export default function IndexCardHeader({ data }) {
-    const {name, icao} = data;
+    const { name, icao } = data;
     return (
         <>
-            <AirportName>{name}</AirportName>
-            <AirportICAO>{icao}</AirportICAO>
+            <HeaderStyles>
+                {/* TODO: styling here awkward */}
+                <div style={{ width: "75%" }}>
+                    <AirportName>{name}</AirportName>
+                    <AirportICAO>{icao}</AirportICAO>
+                </div>
+                <LikeButtonStyles>
+                    <LikeButton></LikeButton>
+                </LikeButtonStyles>
+                
+            </HeaderStyles>
         </>
     );
 }
