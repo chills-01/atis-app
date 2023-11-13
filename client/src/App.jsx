@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
-import IndexWrapper from "./components/IndexCard/IndexWrapper";
-import SearchBarContainer from "./components/SearchBarContainer";
-import NavBarContainer from "./components/NavBarContainer";
+import IndexPage from "./Pages/IndexPage";
 
 function App() {
     const [weatherData, setWeatherData] = useState([]);
@@ -21,11 +19,15 @@ function App() {
         }
     }, []);
 
+    const style = {
+        "display": "flex",
+        "min-height": "100vh",
+        "flex-direction": "column",
+    }
+
     return (
         <>
-            <SearchBarContainer />
-            <IndexWrapper weatherData={weatherData} />
-            <NavBarContainer></NavBarContainer>
+            <IndexPage data={weatherData} style={style}></IndexPage>
         </>
     );
 }

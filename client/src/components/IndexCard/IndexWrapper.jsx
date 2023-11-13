@@ -5,10 +5,12 @@ const IndexWrapperDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     background-color: white;
-    height: auto;
     width: 100%; 
+    border: 1px solid green;
+    overflow: auto;
+    position: absolute;
+    inset: 82px 0 76px 0;
 
 `;
 
