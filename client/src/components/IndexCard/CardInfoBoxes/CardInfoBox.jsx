@@ -8,7 +8,7 @@ const CardInfoBoxDiv = styled.div`
     border: 1px solid;
     border-radius: 5px;
     box-sizing: border-box;
-    width: 64px;
+    width: 62px;
     background-color: white;
 `;
 

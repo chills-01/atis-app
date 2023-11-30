@@ -24,7 +24,7 @@ const LikeButtonStyles = styled.div`
     width: 25%;
 `;
 
-export default function IndexCardHeader({ data }) {
+export default function IndexCardHeader({ data, liked, setLiked }) {
     const { name, icao } = data;
     return (
         <>
@@ -35,7 +35,7 @@ export default function IndexCardHeader({ data }) {
                     <AirportICAO>{icao}</AirportICAO>
                 </div>
                 <LikeButtonStyles>
-                    <LikeButton></LikeButton>
+                    <LikeButton liked={liked} setLiked={setLiked}></LikeButton>
                 </LikeButtonStyles>
                 
             </HeaderStyles>

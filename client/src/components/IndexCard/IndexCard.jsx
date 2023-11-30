@@ -1,3 +1,4 @@
+import { useEffect, useState, useRef } from "react";
 import { styled } from "styled-components";
 import IndexCardInfo from "./IndexCardInfo";
 import IndexCardHeader from "./IndexCardHeader";
@@ -19,11 +20,33 @@ const IndexCardStyle = styled.div`
     }
 `;
 
+
 export default function IndexCard({ data }) {
+    const [liked, setLiked] = useState(false);
+    const isMounted = useRef(false);
+
+    // update api when like button pressed
+    useEffect(() => {
+        async function fetchAllData() {
+            // set weather data not on page load
+            if (isMounted.current) {
+                console.log(`setting state of ${data.icao} to ${liked}`);
+            } else {
+                isMounted.current = true;
+            }
+            
+        }
+        try {
+            fetchAllData();
+        } catch (e) {
+            console.log(e);
+        }
+    }, [liked]);
+
     return (
 
         <IndexCardStyle >
-            <IndexCardHeader data={data}></IndexCardHeader>
+            <IndexCardHeader data={data} liked={liked} setLiked={setLiked}></IndexCardHeader>
             <IndexCardInfo data={data}></IndexCardInfo>
         </IndexCardStyle>
     );

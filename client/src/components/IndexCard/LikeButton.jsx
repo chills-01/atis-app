@@ -1,10 +1,8 @@
 import { IconButton } from "@mui/material";
-import { useState } from "react";
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
-export default function LikeButton() {
-    const [clicked, setClicked] = useState(false);
+export default function LikeButton({liked, setLiked}) {
     // TODO: better styling here, works for non-reactive page
     const styles = {
         position: "relative",
@@ -16,12 +14,12 @@ export default function LikeButton() {
         <IconButton
             aria-label="like"
             onClick={() => {
-                setClicked(!clicked);
-                console.log("clicked");
+                setLiked(!liked);
+                console.log(`I like this!`);
             }}
             style={styles}
         >
-            {clicked ? (
+            {liked ? (
                 <FavoriteOutlinedIcon />
             ) : (
                 <FavoriteBorderOutlinedIcon />

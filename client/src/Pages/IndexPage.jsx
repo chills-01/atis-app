@@ -7,7 +7,6 @@ const IndexPageDiv = styled.div`
     height: 100%;
 `;
 
-// TODO: getting these three containers to sit adjacent flex/ no overflow on indec wrapper
 export default function IndexPage({ data }) {
     return (
         <IndexPageDiv>
