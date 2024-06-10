@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import IndexWrapper from "./components/IndexWrapper";
+import IndexPage from "./Pages/IndexPage";
 
 function App() {
     const [weatherData, setWeatherData] = useState([]);
@@ -19,8 +19,16 @@ function App() {
         }
     }, []);
 
+    const style = {
+        "display": "flex",
+        "min-height": "100vh",
+        "flex-direction": "column",
+    }
+
     return (
-        <IndexWrapper weatherData={weatherData}/>
+        <>
+            <IndexPage data={weatherData} style={style}></IndexPage>
+        </>
     );
 }
 
