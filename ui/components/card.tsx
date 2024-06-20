@@ -10,10 +10,19 @@ import {
 } from "@mantine/core";
 import { IconDots, IconEye, IconFileZip, IconTrash } from "@tabler/icons-react";
 
-const images = [
-  "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png",
-  "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-2.png",
-  "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-3.png",
+const info = [
+  {image: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png",
+    text: "Picture 1"
+  },
+  {image: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-2.png",
+    text: "Picture 2"
+  },
+  {image: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-3.png",
+    text: "Picture 3"
+  },
+  {image: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-5.png",
+    text: "Picture 4"
+  },
 ];
 
 const card = (
@@ -64,15 +73,15 @@ const card = (
       gallery
     </Text>
 
-    <Card.Section mt="sm">
-      <Image src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png" />
-    </Card.Section>
-
     <Card.Section inheritPadding mt="sm" pb="md">
-      <SimpleGrid cols={3}>
-        {images.map((image) => (
+      <SimpleGrid cols={4}>
+        {info.map((info) => {
+          const {image, text} = info;
+          // {image, text} = info;
+          return <div>
           <Image src={image} key={image} radius="sm" />
-        ))}
+          <Text>{text}</Text></div>
+        })}
       </SimpleGrid>
     </Card.Section>
   </Card>
