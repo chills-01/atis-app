@@ -7,33 +7,47 @@ import {
   SimpleGrid,
   rem,
   Center,
+  Stack,
 } from "@mantine/core";
 import { IconDots, IconEye, IconFileZip, IconTrash } from "@tabler/icons-react";
-import { PressureIcon, TemperatureIcon, VisibilityIcon, WindIcon } from "@/components/icons";
+import {
+  PressureIcon,
+  TemperatureIcon,
+  VisibilityIcon,
+  WindIcon,
+} from "@/components/icons";
 
 const icons = [PressureIcon, TemperatureIcon, VisibilityIcon, WindIcon];
+const texts = ["1313 hPa", "28 °C", "6000m", "30kt @ 040°"]
 
 const info = [
-  {image: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png",
-    text: "Picture 1"
+  {
+    image:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png",
+    text: "Picture 1",
   },
-  {image: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-2.png",
-    text: "Picture 2"
+  {
+    image:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-2.png",
+    text: "Picture 2",
   },
-  {image: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-3.png",
-    text: "Picture 3"
+  {
+    image:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-3.png",
+    text: "Picture 3",
   },
-  {image: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-5.png",
-    text: "Picture 4"
+  {
+    image:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-5.png",
+    text: "Picture 4",
   },
 ];
-
 
 const card = (
   <Card withBorder shadow="sm" radius="md" mb={"20px"}>
     <Card.Section withBorder inheritPadding py="xs">
       <Group justify="space-between">
-        <Text fw={500}>Review pictures</Text>
+        <Text fw={500}>Aiport Name</Text>
         <Menu withinPortal position="bottom-end" shadow="sm">
           <Menu.Target>
             <ActionIcon variant="subtle" color="gray">
@@ -84,9 +98,13 @@ const card = (
       <SimpleGrid cols={4}>
         {icons.map((genre, idx) => {
           const Icon = icons[idx];
-          return <Center>
-            <Icon size={40}/>
-          </Center>
+          const text = texts[idx]
+          return (
+              <Stack align="center">
+                <Icon size={40} />
+                <Text size="xs" span >{text}</Text>
+              </Stack>
+          );
         })}
       </SimpleGrid>
     </Card.Section>
