@@ -4,11 +4,14 @@ import {
   Text,
   Menu,
   ActionIcon,
-  Image,
   SimpleGrid,
   rem,
+  Center,
 } from "@mantine/core";
 import { IconDots, IconEye, IconFileZip, IconTrash } from "@tabler/icons-react";
+import { PressureIcon, TemperatureIcon, VisibilityIcon, WindIcon } from "@/components/icons";
+
+const icons = [PressureIcon, TemperatureIcon, VisibilityIcon, WindIcon];
 
 const info = [
   {image: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-1.png",
@@ -24,6 +27,7 @@ const info = [
     text: "Picture 4"
   },
 ];
+
 
 const card = (
   <Card withBorder shadow="sm" radius="md" mb={"20px"}>
@@ -64,7 +68,10 @@ const card = (
         </Menu>
       </Group>
     </Card.Section>
-
+    {/* <WindIcon size={50}/>
+    <TemperatureIcon size={50}/>
+    <PressureIcon size={50}/>
+    <VisibilityIcon size={50}/> */}
     <Text mt="sm" c="dimmed" size="sm">
       <Text span inherit c="var(--mantine-color-anchor)">
         200+ images uploaded
@@ -75,12 +82,11 @@ const card = (
 
     <Card.Section inheritPadding mt="sm" pb="md">
       <SimpleGrid cols={4}>
-        {info.map((info) => {
-          const {image, text} = info;
-          // {image, text} = info;
-          return <div>
-          <Image src={image} key={image} radius="sm" />
-          <Text>{text}</Text></div>
+        {icons.map((genre, idx) => {
+          const Icon = icons[idx];
+          return <Center>
+            <Icon size={40}/>
+          </Center>
         })}
       </SimpleGrid>
     </Card.Section>
