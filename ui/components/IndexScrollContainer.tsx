@@ -17,6 +17,9 @@ export default function IndexScrollContainer() {
     {card}
     {card}
     {card}
+    {card}
+    {card}
+    {card}
   </ScrollArea>
   )
 }

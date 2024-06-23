@@ -6,7 +6,6 @@ import {
   ActionIcon,
   SimpleGrid,
   rem,
-  Center,
   Stack,
 } from "@mantine/core";
 import { IconDots, IconEye, IconFileZip, IconTrash } from "@tabler/icons-react";
@@ -47,7 +46,8 @@ const card = (
   <Card withBorder shadow="sm" radius="md" mb={"20px"}>
     <Card.Section withBorder inheritPadding py="xs">
       <Group justify="space-between">
-        <Text fw={500}>Aiport Name</Text>
+        <Text fw={500}>Moorabbin Airport <Text c="dimmed">YMMB</Text></Text>
+        
         <Menu withinPortal position="bottom-end" shadow="sm">
           <Menu.Target>
             <ActionIcon variant="subtle" color="gray">
@@ -82,26 +82,15 @@ const card = (
         </Menu>
       </Group>
     </Card.Section>
-    {/* <WindIcon size={50}/>
-    <TemperatureIcon size={50}/>
-    <PressureIcon size={50}/>
-    <VisibilityIcon size={50}/> */}
-    <Text mt="sm" c="dimmed" size="sm">
-      <Text span inherit c="var(--mantine-color-anchor)">
-        200+ images uploaded
-      </Text>{" "}
-      since last visit, review them to select which one should be added to your
-      gallery
-    </Text>
 
-    <Card.Section inheritPadding mt="sm" pb="md">
+    <Card.Section inheritPadding p="xs">
       <SimpleGrid cols={4}>
         {icons.map((genre, idx) => {
           const Icon = icons[idx];
           const text = texts[idx]
           return (
-              <Stack align="center">
-                <Icon size={40} />
+              <Stack align="center" gap="xs">
+                <Icon size={35} />
                 <Text size="xs" span >{text}</Text>
               </Stack>
           );

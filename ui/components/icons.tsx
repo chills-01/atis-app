@@ -6,8 +6,8 @@ export function WindIcon({ size }: { size: number }) {
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="#000000"
+      stroke-width="1.2"
+      stroke="#2c3e50"
       fill="none"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -28,7 +28,7 @@ export function TemperatureIcon({ size }: { size: number }) {
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      stroke-width="1.5"
+      stroke-width="1.2"
       stroke="#2c3e50"
       fill="none"
       stroke-linecap="round"
@@ -49,7 +49,7 @@ export function PressureIcon({ size }: { size: number }) {
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      stroke-width="1.5"
+      stroke-width="1.2"
       stroke="#2c3e50"
       fill="none"
       stroke-linecap="round"
@@ -72,7 +72,7 @@ export function VisibilityIcon({ size }: { size: number }) {
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      stroke-width="1.5"
+      stroke-width="1.2"
       stroke="#2c3e50"
       fill="none"
       stroke-linecap="round"
