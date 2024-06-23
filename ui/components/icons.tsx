@@ -6,11 +6,11 @@ export function WindIcon({ size }: { size: number }) {
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      stroke-width="1.2"
+      strokeWidth="1.2"
       stroke="#2c3e50"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M5 8h8.5a2.5 2.5 0 1 0 -2.34 -3.24" />
@@ -28,11 +28,11 @@ export function TemperatureIcon({ size }: { size: number }) {
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      stroke-width="1.2"
+      strokeWidth="1.2"
       stroke="#2c3e50"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M10 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5" />
@@ -49,11 +49,11 @@ export function PressureIcon({ size }: { size: number }) {
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      stroke-width="1.2"
+      strokeWidth="1.2"
       stroke="#2c3e50"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
@@ -72,11 +72,11 @@ export function VisibilityIcon({ size }: { size: number }) {
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      stroke-width="1.2"
+      strokeWidth="1.2"
       stroke="#2c3e50"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M8 4h-2l-3 10v2.5" />
