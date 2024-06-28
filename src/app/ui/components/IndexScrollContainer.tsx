@@ -9,7 +9,7 @@ export default function IndexScrollContainer() {
       // bg="var(--mantine-color-body)"
       p={"20px"}
       w={"100%"}
-      h={"100vh"}
+      h={"100%"}
       // justify="center"
       // gap="md"
       type="never"
