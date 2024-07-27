@@ -9,17 +9,12 @@ export default function IndexScrollContainer() {
       // bg="var(--mantine-color-body)"
       p={"20px"}
       w={"100%"}
-      h={"100%"}
+      h={"auto"}
       // justify="center"
       // gap="md"
       type="never"
     >
-      <WeatherCard />
-      <WeatherCard />
-      <WeatherCard />
-      <WeatherCard />
-      <WeatherCard />
-      <WeatherCard />
+      {[...Array(5).keys()].map(() => <WeatherCard />)}
     </ScrollArea>
   );
 }

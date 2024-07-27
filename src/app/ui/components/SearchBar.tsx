@@ -16,7 +16,6 @@ export default function SearchBar() {
         }}
         gap={"xs"}
       >
-        {/* <p>text 1</p> */}
         <SearchIcon size={30} />
         <TextInput variant="unstyled" placeholder="Search here" w={"80%"}/>
       </Group>
