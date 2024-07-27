@@ -13,7 +13,7 @@ const texts = ["1313 hPa", "28 °C", "6000m", "30kt @ 040°"];
 export default function WeatherCard() {
   return (
     <>
-      <Card withBorder shadow="sm" radius="md" mb={"20px"}>
+      <Card withBorder radius="md" mb={"20px"}>
         <Card.Section withBorder inheritPadding py="xs">
           <Group justify="space-between">
             <Stack gap={0}>
