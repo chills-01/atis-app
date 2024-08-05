@@ -13,7 +13,7 @@ export default function SearchBar() {
         style={{
           height: "60px",
           border: "1px solid white",
-          'border-radius': "10px",
+          "border-radius": "10px",
         }}
         gap="10px"
       >
