@@ -1,8 +1,9 @@
 "use client";
-import { ScrollArea } from "@mantine/core";
+import { getContrastColor, ScrollArea } from "@mantine/core";
 import WeatherCard from "./WeatherCard";
+import { WeatherReport } from "@/app/lib/definitions";
 
-export default function IndexScrollContainer() {
+export default function IndexScrollContainer({ data }: { data: any }) {
   return (
     <ScrollArea
       // bg="var(--mantine-color-body)"
@@ -11,8 +12,8 @@ export default function IndexScrollContainer() {
       h={"auto"}
       type="never"
     >
-      {[...Array(5).keys()].map(() => (
-        <WeatherCard />
+      {data.map((obj: WeatherReport) => (
+        <WeatherCard data={obj} />
       ))}
     </ScrollArea>
   );
