@@ -33,7 +33,7 @@ export default function Page() {
         <a href="https://github.com/chills-01/atis-app" target="_blank">
           <IconBrandGithub size={44} color="white" stroke={1.25} />
         </a>
-        <a href="" target="_blank">
+        <a href="https://www.linkedin.com/in/carter-hills/" target="_blank">
           <IconBrandLinkedin size={50} color="white" stroke={1.1} />
         </a>
       </Group>
