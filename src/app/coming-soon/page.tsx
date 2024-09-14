@@ -1,10 +1,10 @@
-import { Box, Group, Paper, Stack, Text } from "@mantine/core";
-import { Lexend } from "next/font/google";
+import { Group, Stack, Text } from "@mantine/core";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconPlaneDeparture,
 } from "@tabler/icons-react";
+import { Lexend } from "next/font/google";
 
 const lexend = Lexend({ subsets: ["latin"] });
 const lexendSemiBold = Lexend({ weight: "600", subsets: ["latin"] });
@@ -19,9 +19,17 @@ export default function Page() {
         justify="space-around"
         py={"80px"}
       >
-        <Text className={lexendSemiBold.className} c={"white"} size="48px" ta="center">
-          SKYSYNC
-        </Text>
+        <Group gap="xs" justify="space-around">
+          <IconPlaneDeparture color="white" size={44} />
+          <Text
+            className={lexendSemiBold.className}
+            c={"white"}
+            size="48px"
+            ta="center"
+          >
+            SKYSYNC
+          </Text>
+        </Group>
         <Text className={lexend.className} c={"white"} size="20px" ta="center">
           The weather sharing {<br />}app for pilots.
         </Text>
